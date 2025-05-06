@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import styles from "./ChatBot.module.css";
 import Sidebar from "./Sidebar";
 import { BotLogo, User } from "../assets";
 
@@ -18,11 +17,11 @@ export default function History() {
 
       {/* right side */}
       <div className="w-full h-full flex flex-col bg-gray-50">
-        <div className="h-16 w-full p-4">
+        <header className="h-16 w-full p-4">
           <h1 className="font-semibold text-lg tracking-wide text-[#9785ba]">
             Bot AI
           </h1>
-        </div>
+        </header>
 
         <section className="w-full overflow-y-scroll grow p-4">
           <div>
@@ -32,7 +31,7 @@ export default function History() {
             <h3 className="text-lg font-semibold">Today's Chats</h3>
           </div>
 
-          <div className={styles.historyWrapper}>
+          <div>
             {savedChats.length === 0 ? (
               <p>No saved conversations found.</p>
             ) : (

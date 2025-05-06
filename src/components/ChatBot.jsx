@@ -1,6 +1,5 @@
 import { useState, useRef } from "react";
 import sampledata from "./sampleData.json";
-import { Link } from "react-router-dom";
 import { BotLogo, User } from "../assets";
 import FeedbackModel from "./FeedbackModel";
 import Sidebar from "./Sidebar";
@@ -88,11 +87,11 @@ const ChatBot = () => {
 
       {/* right side */}
       <div className="w-full h-full flex flex-col bg-gray-50">
-        <div className="h-16 w-full p-4">
+        <header className="h-16 w-full p-4">
           <h1 className="font-semibold text-lg tracking-wide text-[#9785ba]">
             Bot AI
           </h1>
-        </div>
+        </header>
 
         <section className="w-full overflow-y-scroll grow p-4">
           {chatHistory.length > 0 ? (
